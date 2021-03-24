@@ -1,4 +1,4 @@
-package main.java.sensorval;
+package sensorval;
 
 import java.util.List;
 
@@ -16,11 +16,11 @@ public class SensorValidator
 
 	public static boolean validateSOCreadings(List<Double> values) 
 	{
-		return isNull(values) ? validateReadings(values, maxSOCDelta) : false;
+		return isNull(values) ? false : validateReadings(values, maxSOCDelta);
 	}
 
 	public static boolean validateCurrentreadings(List<Double> values) {
-		return isNull(values) ? validateReadings(values, maxCurrentDelta) : false;
+		return isNull(values) ? false : validateReadings(values, maxCurrentDelta);
 	}
 
 	public static boolean validateReadings(List<Double> values, float maxDelta) {
